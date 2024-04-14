@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Of Us  </title>
+    <style>
+        body {
+            font-family:Futura;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 30px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 30px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            display: none;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .active {
+            display: block;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form input[type="text"],
+        form input[type="tel"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        form input[type="submit"]:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+<p>¡Escucha nuestra música de fondo mientras disfrutas de la galería de arte!</p>
+
+<audio controls>
+    <source src="03.%20The%20Last%20of%20Us.mp3" type="audio/mpeg">
+    Tu navegador no soporta la reproducción de audio.
+</audio>
+
+<header>
+    <h1>The Last of us</h1>
+</header>
+<nav>
+    <a href="#" onclick="mostrarSeccion('quienes-somos')">Quiénes Somos</a>
+    <a href="#" onclick="mostrarSeccion('galeria')">Galería</a>
+    <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
+</nav>
+
+<section id="quienes-somos" class="active">
+    <h2>Quiénes Somos</h2>
+    <p> <strong> Somos una pagina web hecha por fans, en la cual hemos recopilado increibles trabajos que han realizado  amantes de esta saga.</strong> </p>
+
+    <p>  "Luché por mucho tiempo con sobrevivir. Y tú, no importa qué, sigues encontrando algo por lo que luchar" </p>
+      <p>  "Supongo que no importa cuánto lo intentes, no puedes escapar de tu pasado" </p>
+       <p> "Sacrifican a unos pocos para salvar a los muchos" </p>
+        <p>"Resiste y sobrevive" </p>
+
+</section>
+
+   <section id="galeria" class="section container">
+    <h2>Galería</h2>
+    <p>Ilustraciones.</p>
+     <div class="galeria">
+        <img src="thelast1.png" alt="Obra de arte 1">
+        <img src="the%20last%202.png" alt="Obra de arte 2">
+        <img src="the%20last%203.jpeg" alt="Obra de arte 3">
+         <img src="the%20last%204.png" alt="Obra de arte 4">
+         <img src="the%20last%205.jpeg" alt="Obra de arte 5">
+         <img src="the%20last%206.jpeg" alt="Obra de arte 6">
+         <img src="th%20last%207.jpeg" alt="Obra de arte 7">
+     </div>
+   </section>
+
+<section id="contacto">
+    <h2>Contactate con nosotros para ser parte de esta comunidad.</h2>
+    <form action="#" method="post">
+        <input type="text" name="nombre" placeholder="Nombre" required><br>
+        <input type="tel" name="telefono" placeholder="Teléfono" required><br>
+        <input type="email" name="email" placeholder="Correo Electrónico" required><br>
+        <textarea name="mensaje" placeholder="Mensaje"></textarea><br>
+        <input type="submit" value="Enviar">
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 By Kary</p>
+</footer>
+
+<script>
+    function mostrarSeccion(id) {
+        var secciones = document.querySelectorAll('section');
+        secciones.forEach(function(seccion) {
+            seccion.classList.remove('active');
+        });
+        document.getElementById(id).classList.add('active');
+    }
+</script>
+</body>
+</html>
